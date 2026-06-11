@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Microservices Frontend</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<h1>E-Commerce Microservices Frontend</h1>
+
+<div class="box">
+    <h2>Add Product</h2>
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="productPrice" placeholder="Price">
+    <input type="number" id="productStock" placeholder="Stock">
+    <button onclick="addProduct()">Add Product</button>
+</div>
+
+<div class="box">
+    <h2>Product Dashboard</h2>
+    <button onclick="getProducts()">Load Products</button>
+
+    <br><br>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody"></tbody>
+    </table>
+
+    <h3>Product Stock Graph</h3>
+    <div class="chart-container">
+        <canvas id="stockChart"></canvas>
+    </div>
+
+    <h3>Product Price Graph</h3>
+    <div class="pie-container">
+        <canvas id="priceChart"></canvas>
+    </div>
+</div>
+
+<div class="box">
+    <h2>Check Inventory</h2>
+    <input type="number" id="checkProductId" placeholder="Product ID">
+    <input type="number" id="checkQuantity" placeholder="Quantity">
+    <button onclick="checkInventory()">Check Stock</button>
+</div>
+
+<div class="box">
+    <h2>Place Order</h2>
+    <input type="number" id="orderProductId" placeholder="Product ID">
+    <input type="number" id="orderQuantity" placeholder="Quantity">
+    <input type="number" id="orderTotalPrice" placeholder="Total Price">
+    <button onclick="placeOrder()">Place Order</button>
+</div>
+
+<h2>Output</h2>
+<pre id="output"></pre>
+
+<script src="script.js"></script>
+
+</body>
+</html>
